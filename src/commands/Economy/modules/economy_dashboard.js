@@ -39,7 +39,7 @@ async function buildDashboardEmbed(guild, client) {
 
         if (economyKeys && economyKeys.length > 0) {
             for (const key of economyKeys) {
-                const userId = key.split('723067112075165736').pop();
+                const userId = key.split(':').pop();
 
                 const member = await guild.members.fetch(userId).catch(() => null);
                 if (member?.user?.bot) continue;
