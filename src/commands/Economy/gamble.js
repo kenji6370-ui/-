@@ -8,7 +8,7 @@ const BASE_WIN_CHANCE = 0.4;
 const CLOVER_WIN_BONUS = 0.1;
 const CHARM_WIN_BONUS = 0.08;
 const PAYOUT_MULTIPLIER = 2.0;
-const GAMBLE_COOLDOWN = 5 * 60 * 1000;
+const GAMBLE_COOLDOWN = 1 * 60 * 1000;
 
 export default {
     data: new SlashCommandBuilder()
@@ -87,14 +87,14 @@ export default {
                 cashChange = amountWon - betAmount;
 
                 resultEmbed = successEmbed(
-                    "🎉 You Won!",
+                    "🎉 PALDO!",
                     `You successfully gambled and turned your **$${betAmount.toLocaleString()}** bet into **$${amountWon.toLocaleString()}**!${cloverMessage}`,
                 );
             } else {
 cashChange = -betAmount;
 
                 resultEmbed = warningEmbed(
-                    "💔 You Lost...",
+                    "💔 HAHAHA TALO!",
                     `The dice rolled against you. You lost your **$${betAmount.toLocaleString()}** bet.`,
                 );
             }
