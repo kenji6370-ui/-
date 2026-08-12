@@ -95,7 +95,7 @@ cashChange = -betAmount;
 
                 resultEmbed = warningEmbed(
                     "💔 HAHAHA TALO!",
-                    `The dice rolled against you. Sayang **$${betAmount.toLocaleString()}** mo! Binili monalang sana ng Pagkain!.`,
+                    `The dice rolled against you. Sayang **$${betAmount.toLocaleString()}** mo! Binili monalang sana ng Pagkain!`,
                 );
             }
 
