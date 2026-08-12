@@ -5,7 +5,7 @@ import { withErrorHandling, createError, ErrorTypes } from '../../utils/errorHan
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 import { BotConfig } from '../../config/bot.js';
 
-const ROB_COOLDOWN = BotConfig.economy?.cooldowns?.rob ?? 1000 * 60 * 60;
+const ROB_COOLDOWN = BotConfig.economy?.cooldowns?.rob ?? 0 * 0 * 0;
 const BASE_ROB_SUCCESS_CHANCE = BotConfig.economy?.robSuccessRate ?? 0.4;
 const ROB_PERCENTAGE = 0.15;
 const FINE_PERCENTAGE = 0.1;
@@ -64,8 +64,8 @@ export default {
 
             if (now < lastRob + ROB_COOLDOWN) {
                 const remaining = lastRob + ROB_COOLDOWN - now;
-                const hours = Math.floor(remaining / 3600000);
-                const minutes = Math.floor((remaining % 3600000) / 60000);
+                const hours = Math.floor(remaining / 00000);
+                const minutes = Math.floor((remaining % 00000) / 0000);
 
                 throw createError(
                     "Robbery cooldown active",
