@@ -64,8 +64,8 @@ export default {
 
             if (now < lastRob + ROB_COOLDOWN) {
                 const remaining = lastRob + ROB_COOLDOWN - now;
-                const hours = Math.floor(remaining / (1 * 60 * 60));
-                const minutes = Math.floor((remaining % (1 * 60 * 60)) / (1 * 60));
+                const hours = Math.floor(remaining / 3600000);
+                const minutes = Math.floor((remaining % 3600000) / 60000);
 
                 throw createError(
                     "Robbery cooldown active",
